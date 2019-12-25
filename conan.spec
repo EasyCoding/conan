@@ -60,6 +60,7 @@ commitment not to break package recipes and documented behavior.
 
 %prep
 %autosetup -n %{name}-%{version}
+find conans -type f -name "*.py" -exec sed -e '/\/usr\/bin\/env/d' -e '/\/usr\/bin\/python/d' -i "{}" \;
 
 %build
 %py3_build
