@@ -60,7 +60,6 @@ commitment not to break package recipes and documented behavior.
 
 %prep
 %autosetup -n %{name}-%{version}
-sed -e "s/node-semver==0.6.1/node-semver>=0.6.1/g" -i conans/requirements.txt
 find conans -type f -name "*.py" -exec sed -e '/\/usr\/bin\/env/d' -e '/\/usr\/bin\/python/d' -i "{}" \;
 
 %build
