@@ -2,7 +2,7 @@
 %global appdesc A distributed, open source, package manager for C/C++
 
 Name: conan
-Version: 0.30.3
+Version: 1.21.0
 Release: 1%{?dist}
 Summary: %{appsum}
 
@@ -120,5 +120,5 @@ Requires: python2-jwt
 %{python3_sitelib}/*
 
 %changelog
-* Mon Dec 18 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0.30.3-1
-- Initial SPEC release.
+* Wed Dec 25 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 1.21.0-1
+- Updated to version 1.21.0.
