@@ -5,7 +5,7 @@ Release: 1%{?dist}
 Summary: The open-source C/C++ package manager
 License: MIT
 URL: https://github.com/conan-io/%{name}
-Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
 BuildRequires: python3-devel
@@ -67,14 +67,11 @@ commitment not to break package recipes and documented behavior.
 %install
 %py3_install
 
-%check
-%{__python3} setup.py test
-
 %files
 %license LICENSE.md
 %doc README.rst
 %{_bindir}/%{name}*
-%{python3_sitelib}/%{name}
+%{python3_sitelib}/%{name}s
 %{python3_sitelib}/%{name}-*.egg-info
 
 %changelog
