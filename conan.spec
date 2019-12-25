@@ -11,64 +11,27 @@ URL: https://github.com/conan-io/%{name}
 Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
-BuildRequires: python2-devel
 BuildRequires: python3-devel
 
-BuildRequires: python2dist(requests)
 BuildRequires: python3dist(requests)
-BuildRequires: python2dist(six)
 BuildRequires: python3dist(six)
-BuildRequires: python2dist(colorama)
 BuildRequires: python3dist(colorama)
-#BuildRequires: python2dist(patch)
 #BuildRequires: python3dist(patch)
-BuildRequires: python2dist(fasteners)
 BuildRequires: python3dist(fasteners)
-BuildRequires: python2dist(semver)
 BuildRequires: python3dist(semver)
-BuildRequires: python2dist(distro)
 BuildRequires: python3dist(distro)
-BuildRequires: python2dist(pylint)
 BuildRequires: python3dist(pylint)
-BuildRequires: python2dist(future)
 BuildRequires: python3dist(future)
-BuildRequires: python2dist(pygments)
 BuildRequires: python3dist(pygments)
-BuildRequires: python2dist(astroid)
 BuildRequires: python3dist(astroid)
-BuildRequires: python2dist(pluginbase)
 BuildRequires: python3dist(pluginbase)
-BuildRequires: python2dist(bottle)
 BuildRequires: python3dist(bottle)
 
 BuildRequires: PyYAML
 BuildRequires: python3-PyYAML
-BuildRequires: python2-jwt
 BuildRequires: python3-jwt
 
 %description
-%{appdesc}.
-
-%package -n python2-%{name}
-Summary: %{appsum}
-Requires: python2dist(requests)
-Requires: python2dist(six)
-Requires: python2dist(requests)
-Requires: python2dist(colorama)
-Requires: python2dist(fasteners)
-Requires: python2dist(semver)
-Requires: python2dist(distro)
-Requires: python2dist(pylint)
-Requires: python2dist(future)
-Requires: python2dist(pygments)
-Requires: python2dist(astroid)
-Requires: python2dist(pluginbase)
-Requires: python2dist(bottle)
-Requires: PyYAML
-Requires: python2-jwt
-%{?python_provide:%python_provide python2-%{name}}
-
-%description -n python2-%{name}
 %{appdesc}.
 
 %package -n python3-%{name}
@@ -87,7 +50,6 @@ Requires: python3dist(astroid)
 Requires: python3dist(pluginbase)
 Requires: python3dist(bottle)
 Requires: python3-PyYAML
-Requires: python2-jwt
 %{?python_provide:%python_provide python3-%{name}}
 
 %description -n python3-%{name}
@@ -97,21 +59,13 @@ Requires: python2-jwt
 %autosetup -n %{name}-%{version}
 
 %build
-%py2_build
 %py3_build
 
 %install
-%py2_install
 %py3_install
 
 %check
-%{__python2} setup.py test
 %{__python3} setup.py test
-
-%files -n python2-%{name}
-%license LICENSE.md
-%doc README.rst
-%{python2_sitelib}/*
 
 %files -n python3-%{name}
 %license LICENSE.md
