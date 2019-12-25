@@ -9,26 +9,23 @@ Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
 BuildRequires: python3-devel
-
+BuildRequires: python3dist(pyjwt)
 BuildRequires: python3dist(requests)
-BuildRequires: python3dist(six)
+BuildRequires: python3dist(urllib3)
 BuildRequires: python3dist(colorama)
-#BuildRequires: python3dist(patch)
+BuildRequires: python3dist(pyyaml)
 BuildRequires: python3dist(fasteners)
-BuildRequires: python3dist(semver)
+BuildRequires: python3dist(six)
 BuildRequires: python3dist(distro)
-BuildRequires: python3dist(pylint)
 BuildRequires: python3dist(future)
 BuildRequires: python3dist(pygments)
-BuildRequires: python3dist(astroid)
-BuildRequires: python3dist(pluginbase)
-BuildRequires: python3dist(bottle)
+BuildRequires: python3dist(deprecation)
+BuildRequires: python3dist(tqdm)
+BuildRequires: python3dist(jinja2)
+BuildRequires: python3dist(python-dateutil)
+BuildRequires: python3dist(node-semver)
+BuildRequires: python3dist(patch-ng)
 
-BuildRequires: PyYAML
-BuildRequires: python3-PyYAML
-BuildRequires: python3-jwt
-
-Requires: python3-PyYAML
 %{?python_provide:%python_provide python3-%{name}}
 
 %description
