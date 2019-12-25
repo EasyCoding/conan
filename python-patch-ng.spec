@@ -28,6 +28,7 @@ Summary: %{appsum}
 
 %prep
 %autosetup -n %{appname}-%{version}
+sed -e '/\/usr\/bin\/env/d' -i patch_ng.py
 
 %build
 %py3_build
