@@ -9,6 +9,8 @@ Version: 1.17.2
 Release: 1%{?dist}
 Summary: %{appsum}
 
+# Separate license file is currently missing:
+# https://github.com/conan-io/python-patch-ng/issues/8
 License: MIT
 URL: https://github.com/conan-io/%{name}
 Source0: %{pypi_source %{appname}}
