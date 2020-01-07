@@ -45,7 +45,7 @@ sed -e '/\/usr\/bin\/env/d' -i patch_ng.py
 %doc README.md
 %{python3_sitelib}/patch_ng.py
 %{python3_sitelib}/__pycache__/*
-%{python3_sitelib}/patch_ng-*.egg-info
+%{python3_sitelib}/patch_ng-*.egg-info/
 
 %changelog
 * Wed Dec 25 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 1.17.2-1
