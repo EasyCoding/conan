@@ -41,8 +41,8 @@ Summary: %{appsum}
 %files -n python3-%{appname}
 %license LICENSE
 %doc README.rst CHANGES.txt
-%{python3_sitelib}/semver
-%{python3_sitelib}/node_semver-*.egg-info
+%{python3_sitelib}/semver/
+%{python3_sitelib}/node_semver-*.egg-info/
 
 %changelog
 * Wed Dec 25 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0.8.0-1
