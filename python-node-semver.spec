@@ -5,7 +5,7 @@
 
 Name: python-%{appname}
 Version: 0.8.0
-Release: 5%{?dist}
+Release: 6%{?dist}
 Summary: %{appsum}
 
 License: MIT
@@ -46,6 +46,9 @@ Summary: %{appsum}
 %{python3_sitelib}/node_semver-*.egg-info/
 
 %changelog
+* Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.8.0-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
 * Wed Jul 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.8.0-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
