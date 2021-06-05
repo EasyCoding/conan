@@ -6,7 +6,7 @@ and apply unified diffs
 
 Name: python-%{appname}
 Version: 1.17.2
-Release: 6%{?dist}
+Release: 7%{?dist}
 Summary: %{appsum}
 
 # Separate license file is currently missing:
@@ -49,6 +49,9 @@ sed -e '/\/usr\/bin\/env/d' -i patch_ng.py
 %{python3_sitelib}/patch_ng-*.egg-info/
 
 %changelog
+* Fri Jun 04 2021 Python Maint <python-maint@redhat.com> - 1.17.2-7
+- Rebuilt for Python 3.10
+
 * Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1.17.2-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 
